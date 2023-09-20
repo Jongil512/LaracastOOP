@@ -14,10 +14,7 @@ abstract class AchievementType
         return strtolower(str_replace(' ', '-', $this->name())) . '.png';
     }
 
-    public function qualifier($user)
-    {
-
-    }
+    abstract public function qualifier($user);
 }
 
 class FirstThousandPoints extends AchievementType
@@ -38,23 +35,13 @@ class FirstThousandPoints extends AchievementType
     }
 }
 
-class FirstBestAnswer extends AchievementType
+class ReachTop50 extends AchievementType
 {
-    public function name()
-    {
-        return 'First Best Answer';
-    }
-
-    public function icon()
-    {
-        return 'first-best-answer.png';
-    }
-
     public function qualifier($user)
     {
-
+        throw new Exception('Not yet implemented');
     }
 }
 
-$achievements = new FirstThousandPoints();
-echo $achievements->name();
+$achievements = new ReachTop50();
+echo $achievements->qualifier();
