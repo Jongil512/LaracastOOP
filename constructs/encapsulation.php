@@ -1,30 +1,27 @@
 <?php
 
-class Person
+class TennisMatch
 {
-    public $name;
 
-    public function __construct($name)
+    protected $playerOne;
+
+    public function score()
     {
-        $this->name = $name;
+        
     }
 
-    public function job()
-    {
-
-    }
-
-    public function favoriteTeam()
+    private function hasWinner()
     {
 
     }
 
-    private function thingsThatKeepUpAtNight()
+    private function hasAdvantage()
     {
-        return 'We are all going to die.';
+
+    }
+
+    private function inDeuce()
+    {
+
     }
 }
-
-$bob = new Person('Bob');
-
-var_dump($bob->thingsThatKeepUpAtNight());
